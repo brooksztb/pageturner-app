@@ -1,4 +1,5 @@
-import { LitElement, css, html, customElement, property } from 'lit-element';
+import { LitElement, css, html } from 'lit';
+import { customElement, property } from 'lit/decorators'
 
 // For more info on the @pwabuilder/pwainstall component click here https://github.com/pwa-builder/pwa-install
 import '@pwabuilder/pwainstall';
@@ -7,7 +8,7 @@ import '@pwabuilder/pwainstall';
 export class AppHome extends LitElement {
   // For more information on using properties in lit-element
   // check out this link https://lit-element.polymer-project.org/guide/properties#declare-with-decorators
-  @property() message = 'Welcome!';
+  @property() message: string = 'Welcome!';
 
   static get styles() {
     return css`
